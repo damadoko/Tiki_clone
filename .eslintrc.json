@@ -21,7 +21,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": ["react", "@typescript-eslint", "import"],
   "rules": {
     "react/react-in-jsx-scope": 0,
     "react/display-name": 0,
@@ -34,5 +34,13 @@
     "no-use-before-define": 0,
     "@typescript-eslint/no-unused-vars": [2, { "argsIgnorePattern": "^_" }],
     "@typescript-eslint/no-use-before-define": 2
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".tsx", ".ts"],
+        "paths": ["."]
+      }
+    }
   }
 }
